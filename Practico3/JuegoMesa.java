@@ -1,21 +1,31 @@
 package Practico3;
 
 public class JuegoMesa extends Juego {
-    private int ctdadJugadores;
+    private int ctdadMaximaJugadores;
+    private int ctdadMinimaJugadores;
     private float area;
 
-    public JuegoMesa(String name, int ctdadJugadores, float area) {
+    public JuegoMesa(String name, int ctdadMinimaJugadores, int ctdadMaximaJugadores, float area) {
         super(name);
-        this.ctdadJugadores = ctdadJugadores;
+        this.ctdadMaximaJugadores = ctdadMaximaJugadores;
+        this.ctdadMinimaJugadores = ctdadMinimaJugadores;
         this.area = area;
     }
 
-    public int getCtdadJugadores() {
-        return ctdadJugadores;
+    public int getCtdadMaximaJugadores() {
+        return ctdadMaximaJugadores;
     }
 
-    public void setCtdadJugadores(int ctdadJugadores) {
-        this.ctdadJugadores = ctdadJugadores;
+    public void setCtdadMaximaJugadores(int ctdadMaximaJugadores) {
+        this.ctdadMaximaJugadores = ctdadMaximaJugadores;
+    }
+
+    public int getCtdadMinimaJugadores() {
+        return ctdadMinimaJugadores;
+    }
+
+    public void setCtdadMinimaJugadores(int ctdadMinimaJugadores) {
+        this.ctdadMinimaJugadores = ctdadMinimaJugadores;
     }
 
     public float getArea() {
@@ -28,7 +38,8 @@ public class JuegoMesa extends Juego {
 
     @Override
     public String toString() {
-        return "Juego mesa={ ctdad jugadores=" + this.ctdadJugadores + " , area= " + this.area + ", nombre= "
+        return "Juego mesa={ ctdad maxima jugadores=" + this.ctdadMaximaJugadores +
+                ", cantidad minima jugadores=" + this.ctdadMinimaJugadores + " , area= " + this.area + ", nombre= "
                 + super.getNombre() + " }";
     }
 }
